@@ -1,17 +1,14 @@
 import React from 'react'
 import { Provider } from 'react-redux'
-import { Router } from 'react-router'
+import { ConnectedRouter } from 'react-router-redux'
 import routes from '../routes'
 
-type RootType = {
-  store: {},
-  history: {}
-};
-
-export default function Root ({ store, history }: RootType) {
+export default function Root ({ store, history }) {
   return (
     <Provider store={store}>
-      <Router history={history} routes={routes} />
+      <ConnectedRouter history={history}>
+        {routes}
+      </ConnectedRouter>
     </Provider>
   )
 }
