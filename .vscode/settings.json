@@ -1,3 +1,7 @@
 {
-  "javascript.validate.enable": false
+  "javascript.validate.enable": false,
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true
+  }
 }
